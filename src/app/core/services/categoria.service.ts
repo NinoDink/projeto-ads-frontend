@@ -3,7 +3,7 @@ import {
   Categoria,
   CategoriaInput
 } from '../../models/categoria.model';
-import { environment } from '../../../enviroments/enviroment';
+import { environment } from '../../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
@@ -30,4 +30,5 @@ export class CategoriaService {
   atualizar(id: number, dados: CategoriaInput): Observable<Categoria> {
     return this.http.put<Categoria>(`${this.API}/${id}`,dados);
   }
+
 }
